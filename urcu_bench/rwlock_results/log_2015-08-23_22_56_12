@@ -1,0 +1,92 @@
+
+ << PARSEC: init done, cache memory 128 MBs. Quiescence queue size 8192 >>> 
+loading trace file @../ll_trace/ll_60p_key...
+Trace: read 4000621, update 5999379, total 10000000
+99p: read 1910025 write 228624
+Thd 0: tot 250000 ops (r 100000, u 150000) done, 35809 (r 75659, w 8989) cycles per op, max 102889125
+Thd 26: tot 250000 ops (r 99827, u 150173) done, 118158 (r 241596, w 35473) cycles per op, max 101674124
+Thd 24: tot 250000 ops (r 99964, u 150036) done, 118286 (r 241046, w 35869) cycles per op, max 102518356
+Thd 22: tot 250000 ops (r 99939, u 150061) done, 118508 (r 240340, w 36755) cycles per op, max 102893165
+Thd 25: tot 250000 ops (r 99970, u 150030) done, 119001 (r 240786, w 37228) cycles per op, max 104105860
+Thd 29: tot 250000 ops (r 100023, u 149977) done, 119656 (r 245426, w 35157) cycles per op, max 103826260
+Thd 20: tot 250000 ops (r 100042, u 149958) done, 119761 (r 243664, w 36515) cycles per op, max 103090012
+Thd 33: tot 250000 ops (r 100151, u 149849) done, 119862 (r 241200, w 38162) cycles per op, max 101389984
+Thd 23: tot 250000 ops (r 99946, u 150054) done, 120003 (r 244433, w 36519) cycles per op, max 103650243
+Thd 34: tot 250000 ops (r 99823, u 150177) done, 119972 (r 243071, w 37594) cycles per op, max 101112295
+Thd 35: tot 250000 ops (r 100121, u 149879) done, 119954 (r 243428, w 36876) cycles per op, max 103416908
+Thd 27: tot 250000 ops (r 99571, u 150429) done, 120250 (r 244415, w 36826) cycles per op, max 104112071
+Thd 28: tot 250000 ops (r 100484, u 149516) done, 120254 (r 245121, w 35712) cycles per op, max 102320499
+Thd 39: tot 250000 ops (r 100227, u 149773) done, 120175 (r 243598, w 37017) cycles per op, max 105709653
+Thd 21: tot 250000 ops (r 99899, u 150101) done, 120247 (r 246199, w 35925) cycles per op, max 104526472
+Thd 32: tot 250000 ops (r 100221, u 149779) done, 120255 (r 245672, w 35779) cycles per op, max 101976874
+Thd 31: tot 250000 ops (r 99548, u 150452) done, 120311 (r 247242, w 35825) cycles per op, max 106493904
+Thd 38: tot 250000 ops (r 99870, u 150130) done, 120379 (r 242157, w 38816) cycles per op, max 105398416
+Thd 36: tot 250000 ops (r 100392, u 149608) done, 120442 (r 243114, w 37590) cycles per op, max 102322638
+Thd 37: tot 250000 ops (r 100286, u 149714) done, 120510 (r 246211, w 35724) cycles per op, max 102818647
+Thd 30: tot 250000 ops (r 100397, u 149603) done, 120448 (r 243516, w 37305) cycles per op, max 103993364
+Thd 11: tot 250000 ops (r 99979, u 150021) done, 121603 (r 247146, w 37335) cycles per op, max 103897931
+Thd 14: tot 250000 ops (r 100163, u 149837) done, 121649 (r 248448, w 36237) cycles per op, max 103925376
+Thd 12: tot 250000 ops (r 100071, u 149929) done, 121777 (r 250658, w 35107) cycles per op, max 101593896
+Thd 16: tot 250000 ops (r 100368, u 149632) done, 121760 (r 243861, w 39212) cycles per op, max 101935147
+Thd 10: tot 250000 ops (r 99994, u 150006) done, 121761 (r 249528, w 35979) cycles per op, max 103725557
+Thd 13: tot 250000 ops (r 100391, u 149609) done, 121898 (r 248054, w 36615) cycles per op, max 102519768
+Thd 15: tot 250000 ops (r 99759, u 150241) done, 121971 (r 247796, w 37821) cycles per op, max 103268649
+Thd 19: tot 250000 ops (r 99978, u 150022) done, 121965 (r 251420, w 35131) cycles per op, max 102520357
+Thd 18: tot 250000 ops (r 99760, u 150240) done, 121958 (r 250821, w 35793) cycles per op, max 102757147
+Thd 17: tot 250000 ops (r 99778, u 150222) done, 121953 (r 247486, w 37959) cycles per op, max 103028413
+Thd 9: tot 250000 ops (r 100092, u 149908) done, 122877 (r 254016, w 34475) cycles per op, max 101921727
+Thd 1: tot 250000 ops (r 100021, u 149979) done, 122968 (r 252274, w 36092) cycles per op, max 103673521
+Thd 8: tot 250000 ops (r 99894, u 150106) done, 122983 (r 254039, w 34937) cycles per op, max 102789483
+Thd 6: tot 250000 ops (r 100063, u 149937) done, 123062 (r 253505, w 35055) cycles per op, max 103302984
+Thd 4: tot 250000 ops (r 99519, u 150481) done, 123106 (r 255021, w 34918) cycles per op, max 102490386
+Thd 7: tot 250000 ops (r 99995, u 150005) done, 123112 (r 253209, w 35538) cycles per op, max 101972217
+Thd 2: tot 250000 ops (r 99862, u 150138) done, 123130 (r 252088, w 36397) cycles per op, max 102744579
+Thd 3: tot 250000 ops (r 99969, u 150031) done, 123131 (r 253626, w 35342) cycles per op, max 102506140
+Thd 5: tot 250000 ops (r 100264, u 149736) done, 123127 (r 252171, w 35870) cycles per op, max 107091213
+Summary: ../ll_trace/ll_60p_key, (r 242826, w 35686) cycles per op
+
+ << PARSEC: init done, cache memory 128 MBs. Quiescence queue size 8192 >>> 
+loading trace file @../ll_trace/ll_70p_key...
+Trace: read 3000251, update 6999749, total 10000000
+Thd 35: tot 250000 ops (r 74767, u 175233) done, 99120 (r 250595, w 33903) cycles per op, max 103545084
+Thd 38: tot 250000 ops (r 74666, u 175334) done, 99380 (r 250584, w 34378) cycles per op, max 104837295
+Thd 39: tot 250000 ops (r 75364, u 174636) done, 100003 (r 248439, w 35303) cycles per op, max 101716628
+Thd 30: tot 250000 ops (r 75208, u 174792) done, 100542 (r 250735, w 35324) cycles per op, max 102610164
+Thd 29: tot 250000 ops (r 74782, u 175218) done, 100906 (r 249911, w 36766) cycles per op, max 106791870
+Thd 34: tot 250000 ops (r 74774, u 175226) done, 100885 (r 252718, w 35480) cycles per op, max 101595518
+Thd 32: tot 250000 ops (r 75303, u 174697) done, 100905 (r 253759, w 34342) cycles per op, max 107249312
+Thd 33: tot 250000 ops (r 75128, u 174872) done, 100966 (r 251214, w 35833) cycles per op, max 100535128
+Thd 31: tot 250000 ops (r 74675, u 175325) done, 100955 (r 254693, w 34831) cycles per op, max 102966104
+Thd 28: tot 250000 ops (r 75380, u 174620) done, 101227 (r 246983, w 37762) cycles per op, max 101114200
+Thd 36: tot 250000 ops (r 75282, u 174718) done, 101096 (r 251212, w 35792) cycles per op, max 100844562
+Thd 37: tot 250000 ops (r 75228, u 174772) done, 101204 (r 255405, w 34136) cycles per op, max 103137220
+Thd 20: tot 250000 ops (r 74852, u 175148) done, 101536 (r 253492, w 36036) cycles per op, max 103923748
+Thd 25: tot 250000 ops (r 75448, u 174552) done, 101835 (r 253903, w 35462) cycles per op, max 101407588
+Thd 21: tot 250000 ops (r 74983, u 175017) done, 101973 (r 252083, w 37136) cycles per op, max 101538412
+Thd 24: tot 250000 ops (r 74842, u 175158) done, 102026 (r 254133, w 36432) cycles per op, max 103717825
+Thd 23: tot 250000 ops (r 75026, u 174974) done, 102179 (r 257063, w 35267) cycles per op, max 103899684
+Thd 26: tot 250000 ops (r 75062, u 174938) done, 102134 (r 252963, w 36897) cycles per op, max 103140042
+Thd 22: tot 250000 ops (r 74717, u 175283) done, 102233 (r 255749, w 36285) cycles per op, max 104585705
+Thd 27: tot 250000 ops (r 75192, u 174808) done, 102334 (r 253594, w 36810) cycles per op, max 101995955
+Thd 18: tot 250000 ops (r 74707, u 175293) done, 103259 (r 252820, w 38921) cycles per op, max 103857198
+Thd 15: tot 250000 ops (r 75147, u 174853) done, 103256 (r 257658, w 36247) cycles per op, max 103149356
+Thd 19: tot 250000 ops (r 75125, u 174875) done, 103369 (r 258636, w 36030) cycles per op, max 101601039
+Thd 13: tot 250000 ops (r 74930, u 175070) done, 103425 (r 258899, w 36194) cycles per op, max 104498569
+Thd 12: tot 250000 ops (r 74856, u 175144) done, 103472 (r 257676, w 36857) cycles per op, max 100544915
+Thd 14: tot 250000 ops (r 75157, u 174843) done, 103486 (r 256304, w 37101) cycles per op, max 102331588
+Thd 10: tot 250000 ops (r 75375, u 174625) done, 103545 (r 255277, w 37471) cycles per op, max 100708224
+Thd 16: tot 250000 ops (r 75215, u 174785) done, 103618 (r 257759, w 36653) cycles per op, max 101515923
+Thd 11: tot 250000 ops (r 74759, u 175241) done, 103559 (r 256371, w 37762) cycles per op, max 100285658
+Thd 17: tot 250000 ops (r 75264, u 174736) done, 104022 (r 262282, w 35168) cycles per op, max 102275483
+Thd 5: tot 250000 ops (r 74568, u 175432) done, 104705 (r 260683, w 37567) cycles per op, max 102085824
+Thd 4: tot 250000 ops (r 74807, u 175193) done, 104982 (r 259256, w 38665) cycles per op, max 102479826
+Thd 3: tot 250000 ops (r 74723, u 175277) done, 104993 (r 257113, w 39748) cycles per op, max 102310419
+Thd 8: tot 250000 ops (r 75069, u 174931) done, 105027 (r 255324, w 40098) cycles per op, max 103618494
+Thd 9: tot 250000 ops (r 74882, u 175118) done, 105003 (r 259258, w 38575) cycles per op, max 102955566
+Thd 2: tot 250000 ops (r 75186, u 174814) done, 105040 (r 258429, w 38635) cycles per op, max 101986053
+Thd 6: tot 250000 ops (r 75039, u 174961) done, 105063 (r 260307, w 37968) cycles per op, max 103474278
+Thd 7: tot 250000 ops (r 75048, u 174952) done, 105073 (r 260111, w 38116) cycles per op, max 101977509
+Thd 1: tot 250000 ops (r 74623, u 175377) done, 105117 (r 286794, w 27450) cycles per op, max 8084736330
+99p: read 2863899 write 403686
+Thd 0: tot 250000 ops (r 75092, u 174908) done, 104761 (r 254647, w 39971) cycles per op, max 101414493
+Summary: ../ll_trace/ll_70p_key, (r 255870, w 36484) cycles per op
