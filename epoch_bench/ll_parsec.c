@@ -34,7 +34,7 @@ ck_rwlock_t rwlock = CK_RWLOCK_INITIALIZER;
 ck_spinlock_mcs_t mcslock = CK_SPINLOCK_MCS_INITIALIZER;
 ;
 // 0 -> ll, 1 -> parsec, 2-> urcu, 3->rwlock, 4->mcslock, 5->epoch, 6->brlock
-#define BENCH_OP 5
+#define BENCH_OP 6
 
 struct mcs_context {
 	ck_spinlock_mcs_context_t lock_context;
@@ -212,11 +212,23 @@ unsigned int results[NUM_CPU][2];
 
 unsigned long p99_log[N_LOG] CACHE_ALIGNED;
 
+struct epoch_record {
+	ck_epoch_record_t record;
+	char pad[PAGE_SIZE - sizeof(ck_epoch_record_t)];
+} __attribute__((packed, aligned(PAGE_SIZE)));
+
+struct epoch_record epoch_records[NUM_CPU] __attribute__((aligned(PAGE_SIZE)));
+
 ck_epoch_t global_epoch;
-ck_epoch_record_t epoch_records[NUM_CPU];
+
+struct brlock_reader {
+	ck_brlock_reader_t reader;
+	char pad[PAGE_SIZE - sizeof(ck_brlock_reader_t)];
+} __attribute__((packed, aligned(PAGE_SIZE)));
+
+struct brlock_reader brlock_readers[NUM_CPU] __attribute__((aligned(PAGE_SIZE)));
 
 ck_brlock_t brlock;
-ck_brlock_reader_t brlock_readers[NUM_CPU];
 
 static int cmpfunc(const void * a, const void * b)
 {
@@ -234,14 +246,14 @@ void bench(void) {
 	last_alloc = q_alloc(ITEM_SIZE, 1);
 	assert(last_alloc);
 
-	ck_epoch_register(&global_epoch, &epoch_records[id]);
-	ck_brlock_read_register(&brlock, &brlock_readers[id]);
+	ck_epoch_register(&global_epoch, &(epoch_records[id].record));
+	ck_brlock_read_register(&brlock, &(brlock_readers[id].reader));
 		
 	s = get_time();
 	for (i = 0 ; i < N_OPS/NUM_CPU; i++) {
 //		printf("%d: %d\n", id, i);
-		s1 = get_time();//
-		//s1 = tsc_start();//
+		//s1 = get_time();//
+		s1 = tsc_start();//
 
 		if (ops[(unsigned long)id+op_jump*i]) {
 #if BENCH_OP == 0
@@ -260,13 +272,13 @@ void bench(void) {
 #elif BENCH_OP == 2
 			synchronize_rcu();
 #elif BENCH_OP == 5
-			ck_epoch_synchronize(&global_epoch, &epoch_records[id]);
+			ck_epoch_synchronize(&global_epoch, &(epoch_records[id].record));
 #elif BENCH_OP == 6
 			ck_brlock_write_lock(&brlock);
 			ck_brlock_write_unlock(&brlock);
 #endif
-			e1 = get_time();//
-			//e1 = tsc_end();//
+			//e1 = get_time();//
+			e1 = tsc_end();//
 			cost = e1-s1;
 			tot_cost_w += cost;
 			n_update++;
@@ -289,14 +301,14 @@ void bench(void) {
 			rcu_read_lock();
 			rcu_read_unlock();
 #elif BENCH_OP == 5
-			ck_epoch_begin(&global_epoch, &epoch_records[id]);
-			ck_epoch_end(&global_epoch, &epoch_records[id]);
+			ck_epoch_begin(&global_epoch, &(epoch_records[id].record));
+			ck_epoch_end(&global_epoch, &(epoch_records[id].record));
 #elif BENCH_OP == 6
-			ck_brlock_read_lock(&brlock, &brlock_readers[id]);
-			ck_brlock_read_unlock(&brlock_readers[id]);
+			ck_brlock_read_lock(&brlock, &(brlock_readers[id].reader));
+			ck_brlock_read_unlock(&(brlock_readers[id].reader));
 #endif
-			e1 = get_time();//
-			//e1 = tsc_end(); 
+			//e1 = get_time();//
+			e1 = tsc_end(); 
 			cost = e1-s1;
 			tot_cost_r += cost;
 

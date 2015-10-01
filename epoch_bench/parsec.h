@@ -217,8 +217,8 @@ get_time(void)
 	quie_time_t curr_t;
 	
 #ifdef SYNC_USE_RDTSC
-	rdtscll(curr_t);
-	//curr_t = tsc_start();
+	//rdtscll(curr_t);
+	curr_t = tsc_start();
 #else
 	curr_t = get_global_timestamp();
 #endif
